@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 class RobotEdit extends RobotMain {
 
-    static void inputDeleteOrNewRobot(String inputEditOrMove) {
+     void inputDeleteOrNewRobot(String inputEditOrMove) throws IOException {
         RobotEdit robotObjectInputDeleteOrNew = new RobotEdit();
         System.out.println();
         Scanner scanner1 = new Scanner(System.in);
@@ -16,7 +17,6 @@ class RobotEdit extends RobotMain {
             System.out.print("Input: ");
 
             String inputDeleteOrNewRobot = scanner1.nextLine().toLowerCase().replaceAll(" ", "");
-            System.out.println(inputDeleteOrNewRobot);
 
             switch (inputDeleteOrNewRobot) {
                 case "delete":
@@ -51,11 +51,12 @@ class RobotEdit extends RobotMain {
 
          */
 
-        System.out.println("Method createNewRobot to Method robotCreateNewFile");
-        RobotDatabaseCreateNewAndDelete.robotCreateNewFile();
+        System.out.println("");
+        RobotDatabaseCreateNewAndDelete robotObjectDatabaseCreateNewAndDelete = new RobotDatabaseCreateNewAndDelete();
+        robotObjectDatabaseCreateNewAndDelete.robotCreateNewFile();
     }
 
-    private void deleteRobot(String inputDeleteOrNewRobot) {
+    private void deleteRobot(String inputDeleteOrNewRobot) throws IOException {
 
         /*
         System.out.println("What is the name of the robot you want to delete?");
@@ -65,7 +66,8 @@ class RobotEdit extends RobotMain {
         System.out.println("The robots name for deletion is: " + robotName);
          */
 
-        System.out.println("Method deleteRobot to Method robotDeleteFile");
-        RobotDatabaseCreateNewAndDelete.robotDeleteFile();
+        System.out.println("");
+        RobotDatabaseCreateNewAndDelete robotObjectDatabaseCreateNewAndDelete = new RobotDatabaseCreateNewAndDelete();
+        robotObjectDatabaseCreateNewAndDelete.robotDeleteFile();
     }
 }

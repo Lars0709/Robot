@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class RobotMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         RobotMain robotMain = new RobotMain();
 
@@ -10,8 +11,7 @@ public class RobotMain {
 
     }
 
-
-    private void userInputAtStartOfProgram() {
+    private void userInputAtStartOfProgram() throws IOException {
 
         Scanner scanner1 = new Scanner(System.in);
         boolean correctInput = false;
@@ -24,16 +24,17 @@ public class RobotMain {
             System.out.print("Input: ");
 
             String inputEditOrMove = scanner1.nextLine().toLowerCase().replaceAll(" ", "");
-            System.out.println(inputEditOrMove);
 
             switch (inputEditOrMove) {
                 case "edit":
                     correctInput = true;
-                    RobotEdit.inputDeleteOrNewRobot(inputEditOrMove);
+                    RobotEdit robotObjectEdit = new RobotEdit();
+                    robotObjectEdit.inputDeleteOrNewRobot(inputEditOrMove);
                     break;
                 case "move":
                     correctInput = true;
-                    RobotMove.robotMove(inputEditOrMove);
+                    RobotMove robotObjectMove = new RobotMove();
+                    robotObjectMove.robotMove(inputEditOrMove);
                     break;
                 case "exit":
                     break;

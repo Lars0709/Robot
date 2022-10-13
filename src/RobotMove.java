@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class RobotMove extends RobotMain {
 
-    static void robotMove(String inputEditOrMove) {
+    void robotMove(String inputEditOrMove) {
 
         RobotMove robotObjectMove = new RobotMove();
 
