@@ -3,15 +3,19 @@ import java.util.Scanner;
 public class RobotMain {
 
     public static void main(String[] args) {
-        userInputAtStartOfProgram();
+
+        RobotMain robotMain = new RobotMain();
+
+        robotMain.userInputAtStartOfProgram();
+
     }
 
-    private static void userInputAtStartOfProgram() {
+
+    private void userInputAtStartOfProgram() {
 
         Scanner scanner1 = new Scanner(System.in);
         boolean correctInput = false;
 
-        label:
         while (!correctInput) {
 
             System.out.println("Type \"edit\" to delete or create a new robot.");
@@ -32,7 +36,7 @@ public class RobotMain {
                     RobotMove.robotMove(inputEditOrMove);
                     break;
                 case "exit":
-                    break label;
+                    break;
                 default:
                     System.out.println("No valid entry!");
                     System.out.println();
