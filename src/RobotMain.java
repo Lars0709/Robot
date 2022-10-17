@@ -11,15 +11,16 @@ public class RobotMain {
 
     }
 
-    private void userInputAtStartOfProgram() throws IOException {
+    void userInputAtStartOfProgram() throws IOException {
 
         Scanner scanner1 = new Scanner(System.in);
         boolean correctInput = false;
 
+        breakWhileLoop:
         while (!correctInput) {
 
             System.out.println("Type \"edit\" to delete or create a new robot.");
-            System.out.println("type \"move\" to move existing robot.");
+            System.out.println("Type \"move\" to move existing robot.");
             System.out.println("Type \"exit\" to exit.");
             System.out.print("Input: ");
 
@@ -29,15 +30,15 @@ public class RobotMain {
                 case "edit":
                     correctInput = true;
                     RobotEdit robotObjectEdit = new RobotEdit();
-                    robotObjectEdit.inputDeleteOrNewRobot(inputEditOrMove);
+                    robotObjectEdit.inputDeleteOrNewRobot();
                     break;
                 case "move":
                     correctInput = true;
                     RobotMove robotObjectMove = new RobotMove();
-                    robotObjectMove.robotMove(inputEditOrMove);
+                    robotObjectMove.robotMove();
                     break;
                 case "exit":
-                    break;
+                    break breakWhileLoop;
                 default:
                     System.out.println("No valid entry!");
                     System.out.println();

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ccb1faee-4e44-4c4b-8b2b-974020046b5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RobotArchive/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RobotArchive/teste.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Roboter/RobotDatabaseCreateNewAndDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Roboter/RobotDatabaseCreateNewAndDelete.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Roboter/RobotEdit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Roboter/RobotEdit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Roboter/RobotMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Roboter/RobotMain.class" afterDir="false" />
@@ -39,6 +39,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
