@@ -72,15 +72,20 @@ public class RobotDatabase extends RobotMain {
                             Files.createFile(robotToCreate);
                             robotInputCoordinatesForNewRobot(robotToCreate);
                             System.out.println("Robot \"" + robotName + "\" was created!");
+                            System.out.println();
+                            userInputAtStartOfProgram();
                             break whileLoop;
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                     } else {
                         System.out.println("Error: Robot exists already and was not created!");
+                        break;
                     }
                 }else if (confirmCreate.equals("no")){
                     System.out.println("Robot \""+robotToCreate.toString()+"\" was not created!" );
+                    System.out.println();
+                    userInputAtStartOfProgram();
                     break whileLoop;
                 }else{
                     System.out.println("No valid entry!");
@@ -120,6 +125,8 @@ public class RobotDatabase extends RobotMain {
                         try {
                             Files.deleteIfExists(robotToDelete);
                             System.out.println("Robot deleted!");
+                            System.out.println();
+                            userInputAtStartOfProgram();
                             break whileLoop;
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -129,6 +136,8 @@ public class RobotDatabase extends RobotMain {
                     }
                 } else if (confirmDelete.equals("no")) {
                     System.out.println("Robot \"" + robotToDelete.toString() + "\" was not deleted!");
+                    System.out.println();
+                    userInputAtStartOfProgram();
                     break whileLoop;
                 } else {
                     System.out.println("No valid entry!");

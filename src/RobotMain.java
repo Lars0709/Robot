@@ -62,7 +62,7 @@ public class RobotMain {
      * @throws IOException Files
      */
 
-    void inputDeleteOrNewRobot() throws IOException {
+    private void inputDeleteOrNewRobot() throws IOException {
 
         RobotDatabase robotObjectDatabaseCreateNewAndDelete = new RobotDatabase();
         System.out.println();
