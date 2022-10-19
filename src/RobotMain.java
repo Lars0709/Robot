@@ -3,6 +3,11 @@ import java.util.Scanner;
 
 public class RobotMain {
 
+    /**
+     * Main method for initiating Program.
+     * @throws IOException Files
+     */
+
     public static void main(String[] args) throws IOException {
 
         RobotMain robotMain = new RobotMain();
@@ -10,6 +15,11 @@ public class RobotMain {
         robotMain.userInputAtStartOfProgram();
 
     }
+
+    /**
+     * First decision in program decides to edit, move or exit.
+     * @throws IOException Files
+     */
 
     void userInputAtStartOfProgram() throws IOException {
 
@@ -29,14 +39,60 @@ public class RobotMain {
             switch (inputEditOrMove) {
                 case "edit":
                     correctInput = true;
-                    RobotEdit robotObjectEdit = new RobotEdit();
-                    robotObjectEdit.inputDeleteOrNewRobot();
+                    inputDeleteOrNewRobot();
                     break;
                 case "move":
                     correctInput = true;
                     RobotMove robotObjectMove = new RobotMove();
                     robotObjectMove.robotMove();
                     break;
+                case "exit":
+                    break breakWhileLoop;
+                default:
+                    System.out.println("No valid entry!");
+                    System.out.println();
+                    break;
+            }
+        }
+    }
+
+    /**
+     * User input in program decides to new, delete or exit.
+     * @throws IOException Files
+     */
+
+    private void inputDeleteOrNewRobot() throws IOException {
+
+        RobotDatabase robotObjectDatabaseCreateNewAndDelete = new RobotDatabase();
+        System.out.println();
+        Scanner scanner1 = new Scanner(System.in);
+        boolean correctInput = false;
+
+        breakWhileLoop:
+        while (!correctInput) {
+
+            System.out.println("Type \"delete\" to delete a robot.");
+            System.out.println("Type \"new\" to create a new robot.");
+            System.out.println("Type \"exit\" to exit.");
+            System.out.println("Type \"back\" to go one step back.");
+            System.out.print("Input: ");
+            System.out.print("");
+
+            String inputDeleteOrNewRobot = scanner1.nextLine().toLowerCase().replaceAll(" ", "");
+
+            switch (inputDeleteOrNewRobot) {
+                case "delete":
+                    robotObjectDatabaseCreateNewAndDelete.robotDeleteFile();
+                    correctInput = true;
+                    break;
+                case "new":
+                    robotObjectDatabaseCreateNewAndDelete.robotCreateNewFile();
+                    correctInput = true;
+                    break;
+                case "back":
+                    System.out.println("Should go back to main menu");
+
+                    break breakWhileLoop;
                 case "exit":
                     break breakWhileLoop;
                 default:
