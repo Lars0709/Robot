@@ -43,6 +43,7 @@ public class RobotMain {
                     break;
                 case "move":
                     correctInput = true;
+                    System.out.println();
                     RobotMove robotObjectMove = new RobotMove();
                     robotObjectMove.robotMove();
                     break;
@@ -61,7 +62,7 @@ public class RobotMain {
      * @throws IOException Files
      */
 
-    private void inputDeleteOrNewRobot() throws IOException {
+    void inputDeleteOrNewRobot() throws IOException {
 
         RobotDatabase robotObjectDatabaseCreateNewAndDelete = new RobotDatabase();
         System.out.println();
@@ -71,10 +72,10 @@ public class RobotMain {
         breakWhileLoop:
         while (!correctInput) {
 
-            System.out.println("Type \"delete\" to delete a robot.");
-            System.out.println("Type \"new\" to create a new robot.");
-            System.out.println("Type \"exit\" to exit.");
-            System.out.println("Type \"back\" to go one step back.");
+            System.out.println("Enter \"delete\" to delete a robot.");
+            System.out.println("Enter \"new\" to create a new robot.");
+            System.out.println("Enter \"exit\" to exit.");
+            System.out.println("Enter \"back\" to go one step back.");
             System.out.print("Input: ");
             System.out.print("");
 
@@ -90,8 +91,8 @@ public class RobotMain {
                     correctInput = true;
                     break;
                 case "back":
-                    System.out.println("Should go back to main menu");
-
+                    System.out.println();
+                    userInputAtStartOfProgram();
                     break breakWhileLoop;
                 case "exit":
                     break breakWhileLoop;

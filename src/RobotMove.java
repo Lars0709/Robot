@@ -19,6 +19,7 @@ class RobotMove extends RobotMain {
         while (true) {
             System.out.println("\"Move or exit?\"");
             System.out.println("Enter \"move\" to move a robot.");
+            System.out.println("Enter \"back\" to go one step back.");
             System.out.println("Enter \"exit\" to end the program.");
             String confirmCreate = scanner1.nextLine();
             System.out.println("Selection: \"" + confirmCreate + "\"");
@@ -51,7 +52,10 @@ class RobotMove extends RobotMain {
                 moveRobotHowFar(axisToMoveOn, linesFromFileAsInteger);
 
                 robotObjectDatabase.updateExistingFile(chosenRobot, linesFromFileAsInteger);
-            }else if (confirmCreate.equals("exit")){
+            }else if (confirmCreate.equals("exit")) {
+                break;
+            }else if (confirmCreate.equals("back")){
+                System.out.println();
                 break;
             }else{
                 System.out.println("No valid entry!");

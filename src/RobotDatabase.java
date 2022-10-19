@@ -16,7 +16,7 @@ public class RobotDatabase extends RobotMain {
      * Creates new File in RobotArchive.
      */
 
-    void robotCreateNewFile() {
+    void robotCreateNewFile() throws IOException {
 
         System.out.println();
         Scanner scanner1 = new Scanner(System.in);
@@ -134,6 +134,7 @@ public class RobotDatabase extends RobotMain {
                     System.out.println("No valid entry!");
                     System.out.println();
                 }
+
             } while (true);
         }
     }
