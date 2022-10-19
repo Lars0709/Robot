@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccb1faee-4e44-4c4b-8b2b-974020046b5c" name="Default Changelist" comment="17.10 v0.2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RobotArchive/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Roboter/RobotDatabaseCreateNewAndDelete.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Roboter/RobotEdit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Roboter/RobotMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Roboter/RobotMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Roboter/RobotMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Roboter/RobotMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RobotDatabaseCreateNewAndDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RobotDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RobotEdit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RobotMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RobotMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RobotMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RobotMove.java" afterDir="false" />
-    </list>
+    <list default="true" id="ccb1faee-4e44-4c4b-8b2b-974020046b5c" name="Default Changelist" comment="17.10 v0.2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
